@@ -25,7 +25,7 @@ const f = {};
 function first() {} //function declaration
 const second = function() {}; // function expression
 const third = () => {}; // lambda function
-
+const fourth = () =>  //lambda expression 
 
 //контекст и область видимости
 // Переменные объявленные в функции не могут быть доступными где-нибудь вне этой функции,
@@ -243,7 +243,7 @@ const memoise = fn => {
   const cache = {};
   return (...args) =>{
     const key = generateKey(...args);
-    cont value = cache[key]
+    const value = cache[key]
     if (value) return value;
     const result = fn(...args);
     cache[key] = result;
