@@ -337,33 +337,3 @@ fs.readFile('filename','utf8',callback)//будет вызван когда фа
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-function solution(roman) {
-  const table = new Map();
-  table.set('I', 1);
-  table.set('V', 5);
-  console.log(table);
-  const res = [];
-  const arab = roman.split('');
-  console.log(arab);
-  arab.forEach(elem => {
-    for (const key of table) {
-      if (key[0] === elem) {
-        res.push(key[1]);
-      }
-    }
-  });
-  console.log(res);
-}
-
-console.log(solution('VII'));
