@@ -161,6 +161,8 @@ p1.move(7, 23);
 //методы
 
 //замыкание
+// Если функция использует внутри себя переменные материнской функции,
+// то они продолжают существовать даже после окончания этой функции
 const hash = () => {
   const data = {};
   let counter = 0;
@@ -289,6 +291,7 @@ Symbol('name') !== Symbol('name')
 // пулы
 // А пул это набор таких функций, которые лежат в нём,
 // и если нужно их использовать берет оттуда ограниченное количество, чтобы не забивать память
+// В пуле лежат структуры данных, которые мы вынимаем, используем, а потом возвращаем назад
 
 
 // таймеры
@@ -334,33 +337,3 @@ fs.readFile('filename','utf8',callback)//будет вызван когда фа
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-function solution(roman) {
-  const table = new Map();
-  table.set('I', 1);
-  table.set('V', 5);
-  console.log(table);
-  const res = [];
-  const arab = roman.split('');
-  console.log(arab);
-  arab.forEach(elem => {
-    for (const key of table) {
-      if (key[0] === elem) {
-        res.push(key[1]);
-      }
-    }
-  });
-  console.log(res);
-}
-
-console.log(solution('VII'));
