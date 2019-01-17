@@ -227,6 +227,17 @@ const fz = partial(fx, 5, 4);
 // примеси
 // Примеси - это когда мы добавляем объекту/функции/классу/прочему,
 //  не свойственное ему поведение, те новые методы или что-то еще
+const person1 ={name: 'James'};
+const person2 ={};
+const person3 ={};
+
+person2.name = 'Logan'
+const Mixin = obj => {
+  obj.name = obj.name || 'Not named';
+  obj.calculateCost = function(age) {
+    return `${this.name} ${age} years old`;
+  };
+};
 
 
 // утиная типизация
