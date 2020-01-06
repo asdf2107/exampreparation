@@ -97,12 +97,12 @@ do{
   один - 1;
 }while(один > -3);
 
-// цикл for in
-for(const key in Array){
+// цикл for of
+for(const key of Array){
   //для каждого ключа в чем-то(массиве) сделать что-то(только перечисляемые свойства)
 }
 
-// цикл for of
+// цикл for in
 for(let key in obj){
   //do smth      вызывает [Symbol.iterator]
 }
